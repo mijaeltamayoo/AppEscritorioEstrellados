@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace EstrelladosApp
 {
@@ -20,6 +21,12 @@ namespace EstrelladosApp
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
 
         private async void Form1_Load(object sender, EventArgs e)
         {
@@ -102,7 +109,7 @@ namespace EstrelladosApp
             if (text_user.Text == "USUARIO")
             {
                 text_user.Text = "";
-                text_user.ForeColor = Color.DimGray;
+                text_user.ForeColor = Color.LightGray;
             }
         }
 
@@ -111,8 +118,54 @@ namespace EstrelladosApp
             if(text_password.Text == "CONTRASEÑA")
             {
                 text_password.Text = "";
+                text_password.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void text_user_Leave(object sender, EventArgs e)
+        {
+            if (text_user.Text == "")
+            {
+                text_user.Text = "USUARIO";
+                text_user.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void text_password_Leave(object sender, EventArgs e)
+        {
+            if (text_password.Text == "")
+            {
+                text_password.Text = "CONTRASEÑA";
                 text_password.ForeColor = Color.DimGray;
             }
+        }
+
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
