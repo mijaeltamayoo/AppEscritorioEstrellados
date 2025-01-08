@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\estrelladosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\estrelladosapp\\estrelladosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\estrelladosapp\\apiusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\apiusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\estrelladosapp\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\estrelladosapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 183,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\Form1.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\Form1.cs",
+              "RelativeToolTip": "EstrelladosApp\\Form1.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwGMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T09:34:50.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\ApiUsuarios.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\ApiUsuarios.cs",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\ApiUsuarios.cs",
+              "RelativeToolTip": "EstrelladosApp\\ApiUsuarios.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T09:27:41.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\Program.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Program.cs",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\Program.cs",
+              "RelativeToolTip": "EstrelladosApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T09:26:06.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\UsuarioDTO.cs",
+              "RelativeToolTip": "EstrelladosApp\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T09:25:13.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\Form1.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\EstrelladosApp\\EstrelladosApp\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "EstrelladosApp\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T09:24:27.385Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

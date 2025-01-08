@@ -1,0 +1,15 @@
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.csproj.AssemblyReference.cache
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.Properties.Resources.resources
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.csproj.GenerateResource.cache
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.csproj.CoreCompileInputs.cache
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.Form1.resources
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\EstrelladosApp.exe.config
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\EstrelladosApp.exe
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\EstrelladosApp.pdb
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\Estrella.AD73717C.Up2Date
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.exe
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.pdb
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
