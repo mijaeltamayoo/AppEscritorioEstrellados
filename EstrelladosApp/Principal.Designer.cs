@@ -38,15 +38,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.menu = new System.Windows.Forms.Panel();
-            this.cerrar = new System.Windows.Forms.PictureBox();
-            this.minimizar = new System.Windows.Forms.PictureBox();
-            this.panel_titulo = new System.Windows.Forms.Panel();
-            this.container_panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
-            this.panel_titulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -166,68 +159,23 @@
             this.menu.Controls.Add(this.button1);
             this.menu.Controls.Add(this.pictureBox1);
             this.menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menu.Location = new System.Drawing.Point(0, 35);
+            this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(220, 515);
+            this.menu.Size = new System.Drawing.Size(220, 550);
             this.menu.TabIndex = 1;
-            // 
-            // cerrar
-            // 
-            this.cerrar.Image = global::EstrelladosApp.Properties.Resources.Close_Icon;
-            this.cerrar.Location = new System.Drawing.Point(873, 12);
-            this.cerrar.Name = "cerrar";
-            this.cerrar.Size = new System.Drawing.Size(15, 15);
-            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrar.TabIndex = 12;
-            this.cerrar.TabStop = false;
-            // 
-            // minimizar
-            // 
-            this.minimizar.Image = global::EstrelladosApp.Properties.Resources.Minimize_Icon;
-            this.minimizar.Location = new System.Drawing.Point(852, 12);
-            this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(15, 15);
-            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.minimizar.TabIndex = 13;
-            this.minimizar.TabStop = false;
-            // 
-            // panel_titulo
-            // 
-            this.panel_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(99)))));
-            this.panel_titulo.Controls.Add(this.minimizar);
-            this.panel_titulo.Controls.Add(this.cerrar);
-            this.panel_titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_titulo.Location = new System.Drawing.Point(0, 0);
-            this.panel_titulo.Name = "panel_titulo";
-            this.panel_titulo.Size = new System.Drawing.Size(900, 35);
-            this.panel_titulo.TabIndex = 0;
-            // 
-            // container_panel
-            // 
-            this.container_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(206)))), ((int)(((byte)(209)))));
-            this.container_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container_panel.Location = new System.Drawing.Point(220, 35);
-            this.container_panel.Name = "container_panel";
-            this.container_panel.Size = new System.Drawing.Size(680, 515);
-            this.container_panel.TabIndex = 3;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 550);
-            this.Controls.Add(this.container_panel);
             this.Controls.Add(this.menu);
-            this.Controls.Add(this.panel_titulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
-            this.panel_titulo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -244,9 +192,5 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel menu;
-        private System.Windows.Forms.PictureBox cerrar;
-        private System.Windows.Forms.PictureBox minimizar;
-        private System.Windows.Forms.Panel panel_titulo;
-        private System.Windows.Forms.Panel container_panel;
     }
 }

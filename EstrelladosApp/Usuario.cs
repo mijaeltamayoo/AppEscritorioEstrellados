@@ -21,6 +21,10 @@ namespace EstrelladosApp
         {
             InitializeComponent();
             CargarTablaAsync();
+            tabControl1.TabPages[0].Text = "Lista de usuarios";
+            tabControl1.TabPages[1].Text = "Detalles de usuario";
+
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
