@@ -12,7 +12,7 @@ namespace EstrelladosApp
     {
         private string apiUrl = "http://localhost:8080/api/usuarios";
 
-        public async Task GetUsuariosAsync()
+        public async Task<List<UsuarioDTO>> GetUsuariosAsync()
         {
             try
             {
@@ -23,23 +23,19 @@ namespace EstrelladosApp
                     if (response.IsSuccessStatusCode)
                     {
                         string jsonResponse = await response.Content.ReadAsStringAsync();
-
-                        List<UsuarioDTO> usuarios = JsonConvert.DeserializeObject<List<UsuarioDTO>>(jsonResponse);
-
-                        foreach (var usuario in usuarios)
-                        {
-                            Console.WriteLine($"ID: {usuario.Id}, Nombre: {usuario.Nombre}, Correo: {usuario.Correo}, Rol: {usuario.Rol}, Contraseña: {usuario.Contraseña}");
-                        }
+                        return JsonConvert.DeserializeObject<List<UsuarioDTO>>(jsonResponse);
                     }
                     else
                     {
                         Console.WriteLine($"Error al conectar con la API: {response.StatusCode}");
+                        return new List<UsuarioDTO>();
                     }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Ocurrió un error: {ex.Message}");
+                return new List<UsuarioDTO>();
             }
         }
     }

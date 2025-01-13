@@ -13,3 +13,5 @@ C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosA
 C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.pdb
 C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.Principal.resources
+C:\Users\2dam3\source\repos\EstrelladosApp\EstrelladosApp\obj\Debug\EstrelladosApp.Usuario.resources

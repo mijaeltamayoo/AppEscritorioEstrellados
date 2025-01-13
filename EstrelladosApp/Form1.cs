@@ -49,12 +49,8 @@ namespace EstrelladosApp
                 {
                     if (loginResult.Rol == "administrador")
                     {
-                          
-                        this.Hide();
-                    }
-                    else if (loginResult.Rol == "usuario")
-                    {
-                        
+                        Principal principal = new Principal();
+                        principal.Show();
                         this.Hide();
                     }
                 }
@@ -65,42 +61,60 @@ namespace EstrelladosApp
             }
             catch (Exception ex)
             {
-                
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
-        private async Task<UsuarioDTO> LoginAsync(string username, string password)
+
+
+        private async Task<LoginResponse> LoginAsync(string username, string password)
         {
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("http://localhost:8080/api/usuarios");
-
-                if (response.IsSuccessStatusCode)
+                var loginRequest = new
                 {
-                    string jsonResponse = await response.Content.ReadAsStringAsync();
-                    List<UsuarioDTO> usuarios = JsonConvert.DeserializeObject<List<UsuarioDTO>>(jsonResponse);
+                    nombre = username,
+                    contraseña = password
+                };
 
-                    var usuario = usuarios.FirstOrDefault(u => u.Nombre == username && u.Contraseña == password);
+                var jsonContent = JsonConvert.SerializeObject(loginRequest);
+                Console.WriteLine("JSON a enviar: " + jsonContent);
+                var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
-                    if (usuario != null)
+                httpContent.Headers.Clear();
+                httpContent.Headers.Add("Content-Type", "application/json");
+
+                try
+                {
+                    HttpResponseMessage response = await client.PostAsync("http://localhost:8080/api/login", httpContent);
+
+                    if (response.IsSuccessStatusCode)
                     {
-                        return usuario;
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine("Respuesta del servidor: " + jsonResponse);
+
+                        var loginResponse = JsonConvert.DeserializeObject<LoginResponse>(jsonResponse);
+                        return loginResponse;
                     }
                     else
                     {
+                        string errorResponse = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine("Error en la respuesta: " + errorResponse);
+                        MessageBox.Show("Error en el servidor: " + errorResponse);
                         return null;
                     }
                 }
-                else
+                catch (Exception ex)
                 {
+                    Console.WriteLine("Excepción: " + ex.Message);
                     return null;
                 }
             }
         }
 
+
         public class LoginResponse
         {
-            public string Token { get; set; }
             public string Rol { get; set; }
         }
 

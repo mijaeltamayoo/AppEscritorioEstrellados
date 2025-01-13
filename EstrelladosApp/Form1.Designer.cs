@@ -35,14 +35,14 @@
             this.text_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.entrar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.minimizar = new System.Windows.Forms.PictureBox();
             this.cerrar = new System.Windows.Forms.PictureBox();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
+            this.minimizar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // shapeContainer1
@@ -135,27 +135,16 @@
             this.entrar.UseVisualStyleBackColor = false;
             this.entrar.Click += new System.EventHandler(this.entrar_Click);
             // 
-            // panel2
+            // cerrar
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 313);
-            this.panel2.TabIndex = 4;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EstrelladosApp.Properties.Resources.Icono_Sin_Alfa;
-            this.pictureBox1.Location = new System.Drawing.Point(-108, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(486, 241);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.cerrar.Image = global::EstrelladosApp.Properties.Resources.Close_Icon;
+            this.cerrar.Location = new System.Drawing.Point(749, 12);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Size = new System.Drawing.Size(15, 15);
+            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrar.TabIndex = 10;
+            this.cerrar.TabStop = false;
+            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
             // 
             // minimizar
             // 
@@ -168,16 +157,27 @@
             this.minimizar.TabStop = false;
             this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
             // 
-            // cerrar
+            // pictureBox1
             // 
-            this.cerrar.Image = global::EstrelladosApp.Properties.Resources.Close_Icon;
-            this.cerrar.Location = new System.Drawing.Point(749, 12);
-            this.cerrar.Name = "cerrar";
-            this.cerrar.Size = new System.Drawing.Size(15, 15);
-            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrar.TabIndex = 10;
-            this.cerrar.TabStop = false;
-            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
+            this.pictureBox1.Image = global::EstrelladosApp.Properties.Resources.Icono_Sin_Alfa;
+            this.pictureBox1.Location = new System.Drawing.Point(-108, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(486, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 313);
+            this.panel2.TabIndex = 4;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // Form1
             // 
@@ -201,10 +201,10 @@
             this.Text = "USUARIO";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,15 +213,15 @@
         #endregion
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private System.Windows.Forms.TextBox text_user;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private System.Windows.Forms.TextBox text_user;
         private System.Windows.Forms.TextBox text_password;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button entrar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox cerrar;
         private System.Windows.Forms.PictureBox minimizar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
