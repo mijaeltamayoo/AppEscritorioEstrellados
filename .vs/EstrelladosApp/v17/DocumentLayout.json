@@ -3,36 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\apiusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\apiusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\formularios\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\formularios\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\formularios\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\formularios\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\formularios\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\formularios\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\formularios\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\formularios\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\api\\apiusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\api\\apiusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\servicios\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\servicios\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\estrelladosapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\estrelladosapp\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\configuraci\u00F3n\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\configuraci\u00F3n\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\estrelladosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\estrelladosapp\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\estrelladosapp\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\estrelladosapp\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|c:\\users\\2dam3\\source\\repos\\appescritorioestrellados\\estrelladosapp\\formularios\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833A649D-C10A-4EFB-A1E8-4FD0613FA0EA}|EstrelladosApp\\EstrelladosApp.csproj|solutionrelative:estrelladosapp\\formularios\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,37 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Program.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\Program.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Program.cs",
-              "RelativeToolTip": "EstrelladosApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T08:33:22.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApiUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\ApiUsuarios.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\ApiUsuarios.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\ApiUsuarios.cs",
-              "RelativeToolTip": "EstrelladosApp\\ApiUsuarios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T08:32:18.04Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -80,78 +78,182 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Principal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Principal.Designer.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\Principal.Designer.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Principal.Designer.cs",
-              "RelativeToolTip": "EstrelladosApp\\Principal.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:43:50.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Usuario.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\Usuario.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Usuario.cs",
-              "RelativeToolTip": "EstrelladosApp\\Usuario.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:42:52.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Principal.cs",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Principal.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\Principal.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Principal.cs",
-              "RelativeToolTip": "EstrelladosApp\\Principal.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAiwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:42:23.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Usuario.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\Usuario.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Usuario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "EstrelladosApp\\Usuario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:34:57.434Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Principal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Principal.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\Principal.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Principal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "EstrelladosApp\\Principal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Principal.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Formularios\\Principal.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Principal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "EstrelladosApp\\Formularios\\Principal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T10:35:01.398Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Form1.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Formularios\\Form1.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Form1.cs",
+              "RelativeToolTip": "EstrelladosApp\\Formularios\\Form1.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAIwBoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T09:32:56.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Principal.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Formularios\\Principal.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Principal.cs",
+              "RelativeToolTip": "EstrelladosApp\\Formularios\\Principal.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:42:23.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Usuario.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Formularios\\Usuario.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Usuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "EstrelladosApp\\Formularios\\Usuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:34:57.434Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApiUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\API\\ApiUsuarios.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\API\\ApiUsuarios.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\API\\ApiUsuarios.cs",
+              "RelativeToolTip": "EstrelladosApp\\API\\ApiUsuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T08:32:18.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Form1.cs",
-              "RelativeDocumentMoniker": "EstrelladosApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "EstrelladosApp\\Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Form1.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Formularios\\Form1.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "EstrelladosApp\\Formularios\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T09:24:27.385Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "EstrelladosApp\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T09:24:02.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Usuario.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Formularios\\Usuario.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Usuario.cs",
+              "RelativeToolTip": "EstrelladosApp\\Formularios\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T10:43:34.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\packages.config",
+              "RelativeDocumentMoniker": "EstrelladosApp\\packages.config",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\packages.config",
+              "RelativeToolTip": "EstrelladosApp\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-14T09:23:49.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Program.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Program.cs",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Program.cs",
+              "RelativeToolTip": "EstrelladosApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T08:33:22.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\App.config",
+              "RelativeDocumentMoniker": "EstrelladosApp\\App.config",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\App.config",
+              "RelativeToolTip": "EstrelladosApp\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-14T09:53:27.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Servicios\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Servicios\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Servicios\\UsuarioService.cs",
+              "RelativeToolTip": "EstrelladosApp\\Servicios\\UsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T09:54:23.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Configuraci\u00F3n\\App.config",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Configuraci\u00F3n\\App.config",
+              "ToolTip": "C:\\Users\\2dam3\\source\\repos\\AppEscritorioEstrellados\\EstrelladosApp\\Configuraci\u00F3n\\App.config",
+              "RelativeToolTip": "EstrelladosApp\\Configuraci\u00F3n\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-14T09:58:01.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Principal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Principal.Designer.cs",
+              "RelativeDocumentMoniker": "EstrelladosApp\\Formularios\\Principal.Designer.cs",
+              "ToolTip": "C:\\Users\\2dam3\\Source\\Repos\\AppEscritorioEstrellados\\EstrelladosApp\\Formularios\\Principal.Designer.cs",
+              "RelativeToolTip": "EstrelladosApp\\Formularios\\Principal.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:43:50.469Z",
+              "EditorCaption": ""
             }
           ]
         }

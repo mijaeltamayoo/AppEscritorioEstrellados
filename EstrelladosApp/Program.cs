@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using EstrelladosApp.Servicios;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-    
+
 namespace EstrelladosApp
 {
     internal static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static async Task Main()
         {
-            ApiUsuarios api = new ApiUsuarios();
-            await api.GetUsuariosAsync();
+            UsuarioService usuarioService = new UsuarioService();
+            var usuarios = await usuarioService.ObtenerUsuariosAsync();
+
+            Console.WriteLine($"Usuarios obtenidos: {usuarios.Count}");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

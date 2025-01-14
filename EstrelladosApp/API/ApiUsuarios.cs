@@ -1,20 +1,24 @@
-﻿using System;
-using Newtonsoft.Json; 
+﻿using EstrelladosApp.DTOs;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Configuration;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace EstrelladosApp
+namespace EstrelladosApp.API
 {
     internal class ApiUsuarios
     {
-        private string apiUrl = "http://localhost:8080/api/usuarios";
-        /// <summary>
-        /// call http://localhost:8080/api/usuarios
-        /// </summary>
-        /// <returns>a List<UsuarioDTO></returns>
+        private readonly string apiUrl;
+
+        public ApiUsuarios()
+        {
+            string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+            string usuariosEndpoint = ConfigurationManager.AppSettings["UsuariosEndpoint"];
+            apiUrl = $"{baseUrl}{usuariosEndpoint}";
+        }
+
         public async Task<List<UsuarioDTO>> GetUsuariosAsync()
         {
             try

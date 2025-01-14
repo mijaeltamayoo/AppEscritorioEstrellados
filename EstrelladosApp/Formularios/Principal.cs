@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EstrelladosApp.DTOs;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,18 +16,10 @@ namespace EstrelladosApp
 {
     public partial class Principal : Form
     {
-        private List<UsuarioDTO> usuariosList;
-
         public Principal()
         {
             InitializeComponent();
         }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         private void button5_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
