@@ -11,7 +11,10 @@ namespace EstrelladosApp
     internal class ApiUsuarios
     {
         private string apiUrl = "http://localhost:8080/api/usuarios";
-
+        /// <summary>
+        /// call http://localhost:8080/api/usuarios
+        /// </summary>
+        /// <returns>a List<UsuarioDTO></returns>
         public async Task<List<UsuarioDTO>> GetUsuariosAsync()
         {
             try
