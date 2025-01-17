@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EstrelladosApp.DTOs
 {
-    internal class UsuarioDTO
+    public class UsuarioDTO
     {
         public long Id { get; set; }
         public string Nombre { get; set; }

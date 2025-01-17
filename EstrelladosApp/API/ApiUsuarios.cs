@@ -17,6 +17,9 @@ namespace EstrelladosApp.API
             string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
             string usuariosEndpoint = ConfigurationManager.AppSettings["UsuariosEndpoint"];
             apiUrl = $"{baseUrl}{usuariosEndpoint}";
+
+            // Mostrar apiUrl por consola
+            Console.WriteLine($"URL generada para la API de usuarios: {apiUrl}");
         }
 
         public async Task<List<UsuarioDTO>> GetUsuariosAsync()
@@ -27,9 +30,16 @@ namespace EstrelladosApp.API
                 {
                     HttpResponseMessage response = await client.GetAsync(apiUrl);
 
+                    // Mostrar el estado de la respuesta por consola
+                    Console.WriteLine($"Estado de la respuesta: {response.StatusCode}");
+
                     if (response.IsSuccessStatusCode)
                     {
                         string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                        // Mostrar el contenido del JSON recibido
+                        Console.WriteLine($"Respuesta JSON recibida: {jsonResponse}");
+
                         return JsonConvert.DeserializeObject<List<UsuarioDTO>>(jsonResponse);
                     }
                     else

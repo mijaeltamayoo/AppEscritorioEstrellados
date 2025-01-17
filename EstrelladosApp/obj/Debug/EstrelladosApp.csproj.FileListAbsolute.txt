@@ -32,3 +32,4 @@ C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\Es
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.exe
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.pdb
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.Formularios.componentes.UserViewManager.resources

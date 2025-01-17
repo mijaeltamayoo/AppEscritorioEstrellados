@@ -1,46 +1,44 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using EstrelladosApp.API;
+using System.Configuration;
 
 namespace EstrelladosApp
 {
     public partial class Form1 : Form
     {
-        private ApiUsuarios api = new ApiUsuarios();
+        private readonly string loginApiUrl;
 
         public Form1()
         {
             InitializeComponent();
+            // Configuración de la URL del login desde appSettings
+            string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+            string loginEndpoint = ConfigurationManager.AppSettings["LoginEndpoint"];
+            loginApiUrl = $"{baseUrl}{loginEndpoint}";
+            Console.WriteLine($"URL generada para login: {loginApiUrl}");
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-
-        private async void Form1_Load(object sender, EventArgs e)
-        {
-            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#072942");
-            text_user.BackColor = System.Drawing.ColorTranslator.FromHtml("#072942");
-            text_password.BackColor = System.Drawing.ColorTranslator.FromHtml("#072942");
-            await api.GetUsuariosAsync();
-        }
+        private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private async void entrar_Click(object sender, EventArgs e)
         {
-            string usuario = text_user.Text;
-            string password = text_password.Text;
+            string usuario = text_user.Text.Trim();
+            string password = text_password.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Por favor, complete ambos campos.");
+                return;
+            }
 
             try
             {
@@ -50,9 +48,14 @@ namespace EstrelladosApp
                 {
                     if (loginResult.Rol == "administrador")
                     {
+                        // Abrir la ventana principal si el rol es administrador
                         Principal principal = new Principal();
                         principal.Show();
                         this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Acceso denegado. No tiene permisos suficientes.");
                     }
                 }
                 else
@@ -62,63 +65,54 @@ namespace EstrelladosApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show($"Ocurrió un error durante el login: {ex.Message}");
+                
             }
         }
-
-
 
         private async Task<LoginResponse> LoginAsync(string username, string password)
         {
             using (HttpClient client = new HttpClient())
             {
-                var loginRequest = new
-                {
-                    nombre = username,
-                    contraseña = password
-                };
-
-                var jsonContent = JsonConvert.SerializeObject(loginRequest);
-                Console.WriteLine("JSON a enviar: " + jsonContent);
-                var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                httpContent.Headers.Clear();
-                httpContent.Headers.Add("Content-Type", "application/json");
-
                 try
                 {
-                    HttpResponseMessage response = await client.PostAsync("http://localhost:8080/api/login", httpContent);
+                    // Crear la petición JSON
+                    var loginRequest = new { nombre = username, contraseña = password };
+                    var jsonContent = JsonConvert.SerializeObject(loginRequest);
+                    var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                    // Enviar la solicitud POST
+                    HttpResponseMessage response = await client.PostAsync(loginApiUrl, httpContent);
+
+                    Console.WriteLine($"Estado de la respuesta:{loginApiUrl}   *   {response.StatusCode}");
 
                     if (response.IsSuccessStatusCode)
                     {
                         string jsonResponse = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine("Respuesta del servidor: " + jsonResponse);
-
-                        var loginResponse = JsonConvert.DeserializeObject<LoginResponse>(jsonResponse);
-                        return loginResponse;
+                        Console.WriteLine($"Respuesta JSON: {jsonResponse}");
+                        return JsonConvert.DeserializeObject<LoginResponse>(jsonResponse);
                     }
                     else
                     {
                         string errorResponse = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine("Error en la respuesta: " + errorResponse);
-                        MessageBox.Show("Error en el servidor: " + errorResponse);
+                        Console.WriteLine($"Error en el servidor: {errorResponse}");
                         return null;
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Excepción: " + ex.Message);
-                    return null;
+                    Console.WriteLine($"Error al enviar la solicitud: {ex.Message}");
+                    throw;
                 }
             }
         }
-
 
         public class LoginResponse
         {
             public string Rol { get; set; }
         }
 
+        // Métodos para manejo visual de los campos de texto
         private void text_user_Enter(object sender, EventArgs e)
         {
             if (text_user.Text == "USUARIO")
@@ -130,7 +124,7 @@ namespace EstrelladosApp
 
         private void text_password_Enter(object sender, EventArgs e)
         {
-            if(text_password.Text == "CONTRASEÑA")
+            if (text_password.Text == "CONTRASEÑA")
             {
                 text_password.Text = "";
                 text_password.ForeColor = Color.LightGray;
@@ -172,12 +166,6 @@ namespace EstrelladosApp
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
