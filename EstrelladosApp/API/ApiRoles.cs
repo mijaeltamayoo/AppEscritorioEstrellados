@@ -3,26 +3,29 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace EstrelladosApp.API
 {
-    internal class ApiUsuarios
+   
+    public class ApiRoles
     {
         private readonly string apiUrl;
 
-        public ApiUsuarios()
+        public ApiRoles()
         {
             string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
-            string usuariosEndpoint = ConfigurationManager.AppSettings["UsuariosEndpoint"];
-            apiUrl = $"{baseUrl}{usuariosEndpoint}";
+            string rolesEndpoint = ConfigurationManager.AppSettings["RolesEndpoint"];
+            apiUrl = $"{baseUrl}{rolesEndpoint}";
 
             // Mostrar apiUrl por consola
-            Console.WriteLine($"URL generada para la API de usuarios: {apiUrl}");
+            Console.WriteLine($"URL generada para la API de roles: {apiUrl}");
         }
 
-        public async Task<List<UsuarioDTO>> GetUsuariosAsync()
+        public async Task<List<RolDTO>> GetRolesAsync()
         {
             try
             {
@@ -38,19 +41,19 @@ namespace EstrelladosApp.API
 
                         Console.WriteLine($"Respuesta JSON recibida: {jsonResponse}");
 
-                        return JsonConvert.DeserializeObject<List<UsuarioDTO>>(jsonResponse);
+                        return JsonConvert.DeserializeObject<List<RolDTO>>(jsonResponse);
                     }
                     else
                     {
                         Console.WriteLine($"Error al conectar con la API: {response.StatusCode}");
-                        return new List<UsuarioDTO>();
+                        return new List<RolDTO>();
                     }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Ocurrió un error: {ex.Message}");
-                return new List<UsuarioDTO>();
+                return new List<RolDTO>();
             }
         }
     }

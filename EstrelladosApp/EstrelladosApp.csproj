@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\ApiRoles.cs" />
     <Compile Include="API\ApiUsuarios.cs" />
     <Compile Include="Formularios\componentes\UserViewManager.cs">
       <SubType>UserControl</SubType>
@@ -62,8 +63,9 @@
     <Compile Include="Formularios\componentes\UserViewManager.Designer.cs">
       <DependentUpon>UserViewManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Servicios\RolService.cs" />
+    <Compile Include="Servicios\AuthService.cs" />
     <Compile Include="Servicios\UsuarioService.cs" />
-    <None Include="Configuración\App.config" />
     <Compile Include="Formularios\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

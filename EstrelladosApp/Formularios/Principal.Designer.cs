@@ -94,7 +94,6 @@
             this.GraficosButton.TabIndex = 4;
             this.GraficosButton.Text = "Gráficos";
             this.GraficosButton.UseVisualStyleBackColor = false;
-            this.GraficosButton.Click += new System.EventHandler(this.GraficosButton_Click);
             // 
             // UsuariosButton
             // 

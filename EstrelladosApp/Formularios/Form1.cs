@@ -1,33 +1,30 @@
-﻿using Newtonsoft.Json;
+﻿using EstrelladosApp.Servicios;
 using System;
 using System.Drawing;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.Configuration;
 
 namespace EstrelladosApp
 {
     public partial class Form1 : Form
     {
-        private readonly string loginApiUrl;
+        private readonly AuthService _authService;
+        // Importar las funciones de la API de Windows
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr SendMessage(IntPtr hwnd, int msg, int wparam, int lparam);
+
+        private const int WM_SYSCOMMAND = 0x0112;
+        private const int SC_MOVE = 0xF010;
+        private const int HTCAPTION = 0x0002;
 
         public Form1()
         {
             InitializeComponent();
-            // Configuración de la URL del login desde appSettings
-            string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
-            string loginEndpoint = ConfigurationManager.AppSettings["LoginEndpoint"];
-            loginApiUrl = $"{baseUrl}{loginEndpoint}";
-            Console.WriteLine($"URL generada para login: {loginApiUrl}");
+            _authService = new AuthService();
         }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private async void entrar_Click(object sender, EventArgs e)
         {
@@ -42,7 +39,7 @@ namespace EstrelladosApp
 
             try
             {
-                var loginResult = await LoginAsync(usuario, password);
+                var loginResult = await _authService.LoginAsync(usuario, password);
 
                 if (loginResult != null)
                 {
@@ -66,50 +63,7 @@ namespace EstrelladosApp
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error durante el login: {ex.Message}");
-                
             }
-        }
-
-        private async Task<LoginResponse> LoginAsync(string username, string password)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
-                    // Crear la petición JSON
-                    var loginRequest = new { nombre = username, contraseña = password };
-                    var jsonContent = JsonConvert.SerializeObject(loginRequest);
-                    var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                    // Enviar la solicitud POST
-                    HttpResponseMessage response = await client.PostAsync(loginApiUrl, httpContent);
-
-                    Console.WriteLine($"Estado de la respuesta:{loginApiUrl}   *   {response.StatusCode}");
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string jsonResponse = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine($"Respuesta JSON: {jsonResponse}");
-                        return JsonConvert.DeserializeObject<LoginResponse>(jsonResponse);
-                    }
-                    else
-                    {
-                        string errorResponse = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine($"Error en el servidor: {errorResponse}");
-                        return null;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error al enviar la solicitud: {ex.Message}");
-                    throw;
-                }
-            }
-        }
-
-        public class LoginResponse
-        {
-            public string Rol { get; set; }
         }
 
         // Métodos para manejo visual de los campos de texto
