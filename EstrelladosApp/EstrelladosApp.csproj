@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="API\ApiRoles.cs" />
     <Compile Include="API\ApiUsuarios.cs" />
+    <Compile Include="DTOs\UsuarioSinRolDTO.cs" />
     <Compile Include="Formularios\componentes\UserViewManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,12 +81,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Formularios\Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Usuario.Designer.cs">
-      <DependentUpon>Usuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="DTOs\UsuarioDTO.cs" />
     <EmbeddedResource Include="Formularios\componentes\UserViewManager.resx">
       <DependentUpon>UserViewManager.cs</DependentUpon>
@@ -106,9 +101,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Formularios\Usuario.resx">
-      <DependentUpon>Usuario.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

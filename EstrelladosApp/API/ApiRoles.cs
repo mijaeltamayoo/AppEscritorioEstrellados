@@ -1,16 +1,15 @@
 ﻿using EstrelladosApp.DTOs;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace EstrelladosApp.API
 {
-   
     public class ApiRoles
     {
         private readonly string apiUrl;
@@ -41,7 +40,16 @@ namespace EstrelladosApp.API
 
                         Console.WriteLine($"Respuesta JSON recibida: {jsonResponse}");
 
-                        return JsonConvert.DeserializeObject<List<RolDTO>>(jsonResponse);
+                        // Deserializar ignorando la propiedad "usuarios"
+                        var roles = JArray.Parse(jsonResponse)
+                            .Select(role => new RolDTO
+                            {
+                                Id = (int)role["id"],
+                                Name = (string)role["name"]
+                            })
+                            .ToList();
+
+                        return roles;
                     }
                     else
                     {
@@ -58,3 +66,4 @@ namespace EstrelladosApp.API
         }
     }
 }
+

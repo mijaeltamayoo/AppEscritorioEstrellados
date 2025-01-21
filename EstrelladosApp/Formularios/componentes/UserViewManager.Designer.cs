@@ -76,6 +76,7 @@
             this.newUsuarioBTN.TabIndex = 4;
             this.newUsuarioBTN.Text = "guardar";
             this.newUsuarioBTN.UseVisualStyleBackColor = true;
+            this.newUsuarioBTN.Click += new System.EventHandler(this.NewUsuarioBTN_Click);
             // 
             // rolComboBox
             // 

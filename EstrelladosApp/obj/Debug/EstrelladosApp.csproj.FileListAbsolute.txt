@@ -25,7 +25,6 @@ C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\Es
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.Form1.resources
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.Principal.resources
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.Properties.Resources.resources
-C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.Usuario.resources
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.csproj.GenerateResource.cache
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\EstrelladosApp.csproj.CoreCompileInputs.cache
 C:\Users\2dam3\Source\Repos\AppEscritorioEstrellados\EstrelladosApp\obj\Debug\Estrella.AD73717C.Up2Date

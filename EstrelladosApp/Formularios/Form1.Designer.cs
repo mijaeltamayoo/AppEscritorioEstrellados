@@ -81,7 +81,7 @@
             // 
             // text_user
             // 
-            this.text_user.BackColor = System.Drawing.Color.White;
+            this.text_user.BackColor = System.Drawing.Color.Black;
             this.text_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_user.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_user.ForeColor = System.Drawing.Color.DimGray;
@@ -95,7 +95,7 @@
             // 
             // text_password
             // 
-            this.text_password.BackColor = System.Drawing.Color.White;
+            this.text_password.BackColor = System.Drawing.Color.Black;
             this.text_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_password.ForeColor = System.Drawing.Color.DimGray;
