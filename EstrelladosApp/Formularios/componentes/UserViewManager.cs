@@ -24,17 +24,12 @@ namespace EstrelladosApp.Formularios.componentes
 
             ConfigurarDataGridView();
             RefrescarUsuarios();
-            CargarRolesEnComboBox();  // Llamar al método para cargar los roles
+            RefrescarUsuarios();
             dataGridView1.CellValueChanged += DataGridView1_CellValueChanged; // Asociar el evento
         }
 
         // Cargar roles en el ComboBox de rol
-        private void CargarRolesEnComboBox()
-        {
-            rolComboBox.DataSource = _roles;
-            rolComboBox.DisplayMember = "Name";  // Mostrar el nombre del rol
-            rolComboBox.ValueMember = "Id";  // Usar el ID del rol
-        }
+        
 
         private void ConfigurarDataGridView()
         {
@@ -100,6 +95,16 @@ namespace EstrelladosApp.Formularios.componentes
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = _usuarios;
+            // Para cada usuario, asegurarse de que el rol esté correctamente seleccionado
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.DataBoundItem is UsuarioDTO usuario)
+                {
+                    var rolComboBoxCell = (DataGridViewComboBoxCell)row.Cells["Rol"];
+                    rolComboBoxCell.Value = usuario.Rol?.Id;  // Establece el rol seleccionado por defecto
+                    rolComboBoxCell.ValueMember = usuario.Rol?.Name;
+                }
+            }
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -138,7 +143,7 @@ namespace EstrelladosApp.Formularios.componentes
             string nombre = NombreTextBox.Text;
             string correo = CorreoTextBox.Text;
             string contraseña = ContraseñaTextBox.Text;
-            var rolId = rolComboBox.SelectedValue;
+            var rolId = 1;
             //filtros
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(contraseña))
             {
@@ -215,6 +220,41 @@ namespace EstrelladosApp.Formularios.componentes
                 else
                 {
                     MessageBox.Show($"Error al actualizar al usuario {usuario.Nombre}.");
+                }
+            }
+        }
+
+        private bool _isUpdatingText = false;
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Verificar si la tecla presionada es Enter
+            {
+                if (_isUpdatingText) return;
+
+                try
+                {
+                    _isUpdatingText = true;
+                    var textBox = sender as TextBox;
+                    if (textBox != null)
+                    {
+                        string password = textBox.Text;
+
+                        // Convertir el texto en un hash SHA256 utilizando Utils.SHA256
+                        string hashedPassword = Utils.SHA256(password);
+
+                        // Actualizar el valor del TextBox con el hash
+                        textBox.Text = hashedPassword;
+                        // Mover el cursor al final del texto
+                        textBox.SelectionStart = hashedPassword.Length;
+
+                        // Evitar el sonido del sistema al presionar Enter
+                        e.SuppressKeyPress = true;
+                    }
+                }
+                finally
+                {
+                    _isUpdatingText = false;
                 }
             }
         }

@@ -1,4 +1,6 @@
-﻿namespace EstrelladosApp.Formularios.componentes
+﻿using System.Windows.Forms;
+
+namespace EstrelladosApp.Formularios.componentes
 {
     partial class UserViewManager
     {
@@ -33,7 +35,11 @@
             this.CorreoTextBox = new System.Windows.Forms.TextBox();
             this.ContraseñaTextBox = new System.Windows.Forms.TextBox();
             this.newUsuarioBTN = new System.Windows.Forms.Button();
-            this.rolComboBox = new System.Windows.Forms.ComboBox();
+            this.haseadorContraseñas = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +54,7 @@
             // 
             // NombreTextBox
             // 
-            this.NombreTextBox.Location = new System.Drawing.Point(76, 483);
+            this.NombreTextBox.Location = new System.Drawing.Point(67, 473);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.NombreTextBox.TabIndex = 1;
@@ -56,21 +62,21 @@
             // 
             // CorreoTextBox
             // 
-            this.CorreoTextBox.Location = new System.Drawing.Point(182, 483);
+            this.CorreoTextBox.Location = new System.Drawing.Point(173, 473);
             this.CorreoTextBox.Name = "CorreoTextBox";
-            this.CorreoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CorreoTextBox.Size = new System.Drawing.Size(126, 20);
             this.CorreoTextBox.TabIndex = 2;
             // 
             // ContraseñaTextBox
             // 
-            this.ContraseñaTextBox.Location = new System.Drawing.Point(288, 483);
+            this.ContraseñaTextBox.Location = new System.Drawing.Point(305, 473);
             this.ContraseñaTextBox.Name = "ContraseñaTextBox";
-            this.ContraseñaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ContraseñaTextBox.Size = new System.Drawing.Size(174, 20);
             this.ContraseñaTextBox.TabIndex = 3;
             // 
             // newUsuarioBTN
             // 
-            this.newUsuarioBTN.Location = new System.Drawing.Point(535, 482);
+            this.newUsuarioBTN.Location = new System.Drawing.Point(485, 471);
             this.newUsuarioBTN.Name = "newUsuarioBTN";
             this.newUsuarioBTN.Size = new System.Drawing.Size(75, 23);
             this.newUsuarioBTN.TabIndex = 4;
@@ -78,20 +84,60 @@
             this.newUsuarioBTN.UseVisualStyleBackColor = true;
             this.newUsuarioBTN.Click += new System.EventHandler(this.NewUsuarioBTN_Click);
             // 
-            // rolComboBox
+            // haseadorContraseñas
             // 
-            this.rolComboBox.FormattingEnabled = true;
-            this.rolComboBox.Location = new System.Drawing.Point(394, 483);
-            this.rolComboBox.Name = "rolComboBox";
-            this.rolComboBox.Size = new System.Drawing.Size(121, 21);
-            this.rolComboBox.TabIndex = 5;
+            this.haseadorContraseñas.Location = new System.Drawing.Point(67, 517);
+            this.haseadorContraseñas.Name = "haseadorContraseñas";
+            this.haseadorContraseñas.Size = new System.Drawing.Size(493, 20);
+            this.haseadorContraseñas.TabIndex = 5;
+            this.haseadorContraseñas.KeyDown += textBox1_KeyDown;
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(67, 454);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(42, 13);
+            this.name.TabIndex = 6;
+            this.name.Text = "nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(170, 454);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Correo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(302, 454);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Contraseña explicita";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(67, 501);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Combertidor has";
             // 
             // UserViewManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Controls.Add(this.rolComboBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.haseadorContraseñas);
             this.Controls.Add(this.newUsuarioBTN);
             this.Controls.Add(this.ContraseñaTextBox);
             this.Controls.Add(this.CorreoTextBox);
@@ -112,6 +158,10 @@
         private System.Windows.Forms.TextBox CorreoTextBox;
         private System.Windows.Forms.TextBox ContraseñaTextBox;
         private System.Windows.Forms.Button newUsuarioBTN;
-        private System.Windows.Forms.ComboBox rolComboBox;
+        private System.Windows.Forms.TextBox haseadorContraseñas;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

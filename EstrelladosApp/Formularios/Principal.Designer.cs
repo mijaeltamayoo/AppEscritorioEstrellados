@@ -79,6 +79,7 @@
             this.IncidenciasButton.TabIndex = 2;
             this.IncidenciasButton.Text = "Incidencias";
             this.IncidenciasButton.UseVisualStyleBackColor = false;
+            this.IncidenciasButton.Click += new System.EventHandler(this.IncidenciasButton_Click);
             // 
             // GraficosButton
             // 

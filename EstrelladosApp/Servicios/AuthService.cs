@@ -25,6 +25,8 @@ namespace EstrelladosApp.Servicios
             {
                 try
                 {
+                    password =Utils.SHA256(password);
+                    // Mostrar la contraseña hasheada por consola
                     // Crear la petición JSON
                     var loginRequest = new { nombre = username, contraseña = password };
                     var jsonContent = JsonConvert.SerializeObject(loginRequest);
@@ -32,10 +34,10 @@ namespace EstrelladosApp.Servicios
 
                     // Enviar la solicitud POST
                     HttpResponseMessage response = await client.PostAsync(loginApiUrl, httpContent);
-
                     if (response.IsSuccessStatusCode)
                     {
                         string jsonResponse = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine($"jsonResponse: {jsonResponse}");
                         return JsonConvert.DeserializeObject<LoginResponse>(jsonResponse);
                     }
                     else

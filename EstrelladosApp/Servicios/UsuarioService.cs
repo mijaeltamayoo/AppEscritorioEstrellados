@@ -33,6 +33,6 @@ namespace EstrelladosApp.Servicios
         internal async Task<bool> ActualizarUsuario(UsuarioDTO usuario)
         {
             return await _apiUsuarios.ActualizarUsuario(usuario);
-    }
+        }
     }
 }
