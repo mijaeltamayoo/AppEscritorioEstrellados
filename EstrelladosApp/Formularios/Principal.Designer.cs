@@ -124,28 +124,30 @@
             this.sideNavPanel.Location = new System.Drawing.Point(0, 0);
             this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sideNavPanel.Name = "sideNavPanel";
-            this.sideNavPanel.Size = new System.Drawing.Size(219, 550);
+            this.sideNavPanel.Size = new System.Drawing.Size(219, 616);
             this.sideNavPanel.TabIndex = 2;
             // 
             // mainPanel
             // 
-            this.mainPanel.Location = new System.Drawing.Point(220, 0);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(219, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(679, 550);
+            this.mainPanel.Size = new System.Drawing.Size(868, 616);
             this.mainPanel.TabIndex = 3;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 550);
+            this.ClientSize = new System.Drawing.Size(1087, 616);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sideNavPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sideNavPanel.ResumeLayout(false);
             this.ResumeLayout(false);

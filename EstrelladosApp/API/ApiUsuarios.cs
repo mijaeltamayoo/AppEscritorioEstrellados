@@ -134,44 +134,7 @@ namespace EstrelladosApp.API
                 return false;
             }
         }
-        /*error y la peticion 
-         
-         "Usuario actualizado: 5nullnullnull" "@PutMapping("/usuarios/{id}")
-    public ResponseEntity<UsuarioDTO> actualizarUsuario(@PathVariable Long id, @RequestBody UsuarioDTO usuarioDTO) {
-        Optional<Usuario> usuario_nuevo = usuarioRepositorio.findById(id);
         
-        if (usuario_nuevo.isEmpty()) {
-            return ResponseEntity.notFound().build(); 
-        }
-
-        Usuario usuario = usuario_nuevo.get();
-        usuario.setNombre(usuarioDTO.getNombre());
-        usuario.setCorreo(usuarioDTO.getCorreo());
-        usuario.setContraseña(usuarioDTO.getContraseña());
-
-
-        Usuario usuario_updated = usuarioRepositorio.save(usuario);
-
-        UsuarioDTO updatedUsuarioDTO = new UsuarioDTO(
-            usuario_updated.getId(),
-            usuario_updated.getNombre(),
-            usuario_updated.getCorreo(),
-            usuario_updated.getContraseña(),
-            new RolPrivateDTO(usuario_updated.getRol().getId(),usuario_updated.getRol().getName())
-            );
-            System.out.println("Usuario actualizado: " + usuario_updated.getId()+
-            usuario_updated.getNombre()+
-            usuario_updated.getCorreo()+
-            usuario_updated.getContraseña());
-        return ResponseEntity.ok(updatedUsuarioDTO); 
-    }" "URL generada para la actualización del usuario: http://10.10.13.251:8080/usuarios/4
-JSON enviado: {"Id":4,"Nombre":"user","Correo":"user1@estrella2.com","Contraseña":"9250e222c4c71f0c58d4c54b50a880a312e9f9fed55d5c3aa0b0e860ded99165","Rol":{"Id":2,"Name":null}}
-peticion JSON recibida: System.Net.Http.StringContent
-Estado de la respuesta: OK
-Respuesta JSON recibida: {"id":4,"nombre":null,"correo":null,"contraseña":null,"rol":{"id":2,"nombre":"usuario"}}
-URL generada para la API de usuarios: http://10.10.13.251:8080/usuarios
-Estado de la respuesta: OK" 
-         */
         internal async Task<bool> ActualizarUsuario(UsuarioDTO usuario)
         {
             string apiUrl = $"{baseUrl}{ConfigurationManager.AppSettings["UsuariosEndpoint"]}/{usuario.Id}";

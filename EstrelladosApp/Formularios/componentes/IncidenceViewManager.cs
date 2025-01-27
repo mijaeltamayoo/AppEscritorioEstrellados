@@ -1,7 +1,10 @@
 ﻿using EstrelladosApp.DTOs;
+using EstrelladosApp.Servicios;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EstrelladosApp.Formularios.componentes
@@ -32,7 +35,7 @@ namespace EstrelladosApp.Formularios.componentes
             _tiposIncidencia = tiposIncidencia;
 
             ConfigurarDataGridView();
-            RefrescarIncidencias();
+            RefrescarIncidenciasAsync();
             ConfigurarComboboxes();
         }
 
@@ -146,8 +149,10 @@ namespace EstrelladosApp.Formularios.componentes
         }
 
 
-        private void RefrescarIncidencias()
+        private async Task RefrescarIncidenciasAsync()
         {
+            _incidencias.Clear();
+            _incidencias = await new IncidenciaService().ObtenerIncidenciasAsync();
             var incidenciasExtendidas = _incidencias.Select(i => new
             {
                 i.Id,
@@ -180,14 +185,26 @@ namespace EstrelladosApp.Formularios.componentes
             }
         }
 
-        private void EliminarIncidencia(int rowIndex)
+        private async void EliminarIncidencia(int rowIndex)
         {
             var incidencia = _incidencias[rowIndex];
             if (MessageBox.Show($"¿Está seguro de que desea eliminar la incidencia ID {incidencia.Id}?", "Confirmar eliminación", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                _incidencias.RemoveAt(rowIndex);
-                RefrescarIncidencias();
-                MessageBox.Show($"Incidencia ID {incidencia.Id} eliminada correctamente.");
+                var nuevaIncidencia = new IncidenciafkDTO
+                {
+                    id = incidencia.Id,
+                };
+                if (await new IncidenciaService().deleteIncidencia(nuevaIncidencia))
+                {
+
+                    RefrescarIncidenciasAsync();
+                    MessageBox.Show($"Incidencia por {nuevaIncidencia.causa} eliminado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show($"Incidencia por {nuevaIncidencia.causa} no eliminado ");
+                }
+
             }
         }
         // Método para configurar los combobox
@@ -204,9 +221,9 @@ namespace EstrelladosApp.Formularios.componentes
             provinciaComboBox.ValueMember = "Id";
 
             // Combobox de regiones
-            ciudadComboBox.DataSource = _regiones;
-            ciudadComboBox.DisplayMember = "NombreEs"; // Por ejemplo, nombre en español
-            ciudadComboBox.ValueMember = "IdRegion";
+            regionComboBox.DataSource = _regiones;
+            regionComboBox.DisplayMember = "NombreEs"; // Por ejemplo, nombre en español
+            regionComboBox.ValueMember = "IdRegion";
 
             // Combobox de tipos de incidencia
             tipoIncidenciaComboBox.DataSource = _tiposIncidencia;
@@ -230,32 +247,43 @@ namespace EstrelladosApp.Formularios.componentes
 
         }
 
-        private void guardarIncidenciaBTN_Click(object sender, EventArgs e)
+        private async void guardarIncidenciaBTN_Click(object sender, EventArgs e)
         {
             int ciudadId = (int)ciudadComboBox1.SelectedValue;
             int provinciaId = (int)provinciaComboBox.SelectedValue;
-            int regionId = (int)ciudadComboBox.SelectedValue; // Región
+            int regionId = (int)regionComboBox.SelectedValue; 
             int tipoIncidenciaId = (int)tipoIncidenciaComboBox.SelectedValue;
 
-            var nuevaIncidencia = new IncidenciaDTO
+            var nuevaIncidencia = new IncidenciafkDTO
             {
-                Latitud = latitudTextBox.Text,
-                Longitud = longitudTextBox.Text,
-                Causa = causaTextBox.Text,
-                NivelIncidencia = nivelIncidenciaTextBox.Text,
-                Carretera = carreteraTextBox5.Text,
-                FechaInicio = fechaInicioDateTimePicker.Value,
-                Ciudad = _ciudades.FirstOrDefault(c => c.Id == ciudadId),
-                Provincia = _provincias.FirstOrDefault(p => p.Id == provinciaId),
-                Region = _regiones.FirstOrDefault(r => r.IdRegion == regionId),
-                TipoIncidencia = _tiposIncidencia.FirstOrDefault(t => t.Id == tipoIncidenciaId)
+                latitud = latitudTextBox.Text,
+                longitud = longitudTextBox.Text,
+                causa = causaTextBox.Text,
+                nivelIncidencia = nivelIncidenciaTextBox.Text,
+                carretera = carreteraTextBox5.Text,
+                fechaInicio = fechaInicioDateTimePicker.Value,
+                idCiudad = ciudadId,
+                idRegion = regionId,
+                idTipoIncidencia = tipoIncidenciaId
             };
 
-            _incidencias.Add(nuevaIncidencia);
-            RefrescarIncidencias();
-            MessageBox.Show("Incidencia guardada con éxito.");
+            if (await new IncidenciaService().RegistrarIncidencia(nuevaIncidencia))
+            {
+
+                RefrescarIncidenciasAsync();
+                MessageBox.Show($"Incidencia por {nuevaIncidencia.causa} guardado correctamente.");
+            }
+            else
+            {
+                MessageBox.Show($"Incidencia por {nuevaIncidencia.causa} no guardado ");
+            }
+            
+            
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

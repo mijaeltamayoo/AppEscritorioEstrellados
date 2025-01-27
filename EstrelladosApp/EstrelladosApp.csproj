@@ -63,6 +63,7 @@
     <Compile Include="API\ApiTiposIncidencia.cs" />
     <Compile Include="API\ApiUsuarios.cs" />
     <Compile Include="DTOs\CiudadDTO.cs" />
+    <Compile Include="DTOs\IncidenciafkDTO.cs" />
     <Compile Include="DTOs\IncidenciaDTO.cs" />
     <Compile Include="DTOs\ProvinciaDTO.cs" />
     <Compile Include="DTOs\RegionDTO.cs" />

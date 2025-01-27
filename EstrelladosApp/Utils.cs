@@ -7,19 +7,18 @@ namespace EstrelladosApp
 {
     internal class Utils
     {
-        public static string SHA256(string input)
+        public static string MD5(string input)
         {
             try
             {
-                // Crear una instancia de SHA256
-                using (System.Security.Cryptography.SHA256 sha256 = System.Security.Cryptography.SHA256.Create())
-
+                // Crear una instancia de MD5
+                using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
                 {
                     // Convertir la entrada a bytes
                     byte[] inputBytes = Encoding.UTF8.GetBytes(input);
 
                     // Calcular el hash
-                    byte[] hashBytes = sha256.ComputeHash(inputBytes);
+                    byte[] hashBytes = md5.ComputeHash(inputBytes);
 
                     // Convertir el hash en una cadena hexadecimal
                     StringBuilder hexString = new StringBuilder();
@@ -33,7 +32,7 @@ namespace EstrelladosApp
             }
             catch (Exception e)
             {
-                throw new Exception("Error al calcular el hash SHA-256", e);
+                throw new Exception("Error al calcular el hash MD5", e);
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using EstrelladosApp.Servicios;
+using System.Threading.Tasks;
 
 namespace EstrelladosApp.Formularios.componentes
 {
@@ -23,8 +24,8 @@ namespace EstrelladosApp.Formularios.componentes
             _roles = roles;
 
             ConfigurarDataGridView();
-            RefrescarUsuarios();
-            RefrescarUsuarios();
+            RefrescarUsuariosAsync();
+            RefrescarUsuariosAsync();
             dataGridView1.CellValueChanged += DataGridView1_CellValueChanged; // Asociar el evento
         }
 
@@ -91,10 +92,12 @@ namespace EstrelladosApp.Formularios.componentes
             dataGridView1.CellClick += DataGridView1_CellClick;
         }
 
-        private void RefrescarUsuarios()
+        private async Task RefrescarUsuariosAsync()
         {
+            _usuarios.Clear();
+            _usuarios = await new UsuarioService().ObtenerUsuariosAsync();
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = _usuarios;
+            dataGridView1.DataSource = _usuarios; 
             // Para cada usuario, asegurarse de que el rol esté correctamente seleccionado
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -102,7 +105,6 @@ namespace EstrelladosApp.Formularios.componentes
                 {
                     var rolComboBoxCell = (DataGridViewComboBoxCell)row.Cells["Rol"];
                     rolComboBoxCell.Value = usuario.Rol?.Id;  // Establece el rol seleccionado por defecto
-                    rolComboBoxCell.ValueMember = usuario.Rol?.Name;
                 }
             }
         }
@@ -125,9 +127,8 @@ namespace EstrelladosApp.Formularios.componentes
             {
                 if (await new UsuarioService().BorrarUsuario(usuario.Id))
                 {
-                    _usuarios.RemoveAt(rowIndex);
-                    RefrescarUsuarios();
-                    MessageBox.Show($"Usuario {usuario.Nombre} eliminado correctamente.");
+                    RefrescarUsuariosAsync();
+                    //MessageBox.Show($"Usuario {usuario.Nombre} eliminado correctamente.");
                 }
                 else {
                     MessageBox.Show($"Usuario {usuario.Nombre} no eliminado ");
@@ -169,7 +170,7 @@ namespace EstrelladosApp.Formularios.componentes
 
             if (await new UsuarioService().RegistrarUsuario(nuevoUsuario)) {
                 _usuarios.Add(nuevoUsuario);
-                RefrescarUsuarios();
+                RefrescarUsuariosAsync();
                 MessageBox.Show($"Usuario {nombre} guardado correctamente.");
             }
             else
@@ -215,7 +216,7 @@ namespace EstrelladosApp.Formularios.componentes
 
                 if (actualizado)
                 {
-                    MessageBox.Show($"Usuario {usuario.Nombre} actualizado correctamente.");
+                    //MessageBox.Show($"Usuario {usuario.Nombre} actualizado correctamente.");
                 }
                 else
                 {
@@ -241,7 +242,7 @@ namespace EstrelladosApp.Formularios.componentes
                         string password = textBox.Text;
 
                         // Convertir el texto en un hash SHA256 utilizando Utils.SHA256
-                        string hashedPassword = Utils.SHA256(password);
+                        string hashedPassword = Utils.MD5(password);
 
                         // Actualizar el valor del TextBox con el hash
                         textBox.Text = hashedPassword;

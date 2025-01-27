@@ -40,21 +40,27 @@ namespace EstrelladosApp.Formularios.componentes
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 41);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(862, 410);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(582, 410);
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView1.Size = new System.Drawing.Size(862, 410);
             this.dataGridView1.TabIndex = 0;
             // 
             // NombreTextBox
             // 
-            this.NombreTextBox.Location = new System.Drawing.Point(67, 473);
+            this.NombreTextBox.Location = new System.Drawing.Point(47, 32);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.NombreTextBox.TabIndex = 1;
@@ -62,21 +68,21 @@ namespace EstrelladosApp.Formularios.componentes
             // 
             // CorreoTextBox
             // 
-            this.CorreoTextBox.Location = new System.Drawing.Point(173, 473);
+            this.CorreoTextBox.Location = new System.Drawing.Point(153, 32);
             this.CorreoTextBox.Name = "CorreoTextBox";
-            this.CorreoTextBox.Size = new System.Drawing.Size(126, 20);
+            this.CorreoTextBox.Size = new System.Drawing.Size(197, 20);
             this.CorreoTextBox.TabIndex = 2;
             // 
             // ContraseñaTextBox
             // 
-            this.ContraseñaTextBox.Location = new System.Drawing.Point(305, 473);
+            this.ContraseñaTextBox.Location = new System.Drawing.Point(356, 32);
             this.ContraseñaTextBox.Name = "ContraseñaTextBox";
-            this.ContraseñaTextBox.Size = new System.Drawing.Size(174, 20);
+            this.ContraseñaTextBox.Size = new System.Drawing.Size(361, 20);
             this.ContraseñaTextBox.TabIndex = 3;
             // 
             // newUsuarioBTN
             // 
-            this.newUsuarioBTN.Location = new System.Drawing.Point(485, 471);
+            this.newUsuarioBTN.Location = new System.Drawing.Point(723, 32);
             this.newUsuarioBTN.Name = "newUsuarioBTN";
             this.newUsuarioBTN.Size = new System.Drawing.Size(75, 23);
             this.newUsuarioBTN.TabIndex = 4;
@@ -86,16 +92,15 @@ namespace EstrelladosApp.Formularios.componentes
             // 
             // haseadorContraseñas
             // 
-            this.haseadorContraseñas.Location = new System.Drawing.Point(67, 517);
+            this.haseadorContraseñas.Location = new System.Drawing.Point(244, 84);
             this.haseadorContraseñas.Name = "haseadorContraseñas";
             this.haseadorContraseñas.Size = new System.Drawing.Size(493, 20);
             this.haseadorContraseñas.TabIndex = 5;
-            this.haseadorContraseñas.KeyDown += textBox1_KeyDown;
             // 
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(67, 454);
+            this.name.Location = new System.Drawing.Point(47, 13);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(42, 13);
             this.name.TabIndex = 6;
@@ -104,7 +109,7 @@ namespace EstrelladosApp.Formularios.componentes
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 454);
+            this.label1.Location = new System.Drawing.Point(150, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 7;
@@ -113,7 +118,7 @@ namespace EstrelladosApp.Formularios.componentes
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(302, 454);
+            this.label2.Location = new System.Drawing.Point(353, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 8;
@@ -122,32 +127,43 @@ namespace EstrelladosApp.Formularios.componentes
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 501);
+            this.label3.Location = new System.Drawing.Point(244, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Combertidor has";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.haseadorContraseñas);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.NombreTextBox);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.CorreoTextBox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.ContraseñaTextBox);
+            this.panel1.Controls.Add(this.name);
+            this.panel1.Controls.Add(this.newUsuarioBTN);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 496);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(868, 120);
+            this.panel1.TabIndex = 10;
             // 
             // UserViewManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.name);
-            this.Controls.Add(this.haseadorContraseñas);
-            this.Controls.Add(this.newUsuarioBTN);
-            this.Controls.Add(this.ContraseñaTextBox);
-            this.Controls.Add(this.CorreoTextBox);
-            this.Controls.Add(this.NombreTextBox);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
+            this.MinimumSize = new System.Drawing.Size(868, 616);
             this.Name = "UserViewManager";
-            this.Size = new System.Drawing.Size(679, 550);
+            this.Size = new System.Drawing.Size(868, 616);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -163,5 +179,6 @@ namespace EstrelladosApp.Formularios.componentes
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Panel panel1;
     }
 }
