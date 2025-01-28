@@ -10,26 +10,28 @@ namespace EstrelladosApp.API
 {
     internal class ApiUsuarios
     {
-        private readonly string apiUrl;
+        string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
 
-        public ApiUsuarios()
-        {
-            string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
-            string usuariosEndpoint = ConfigurationManager.AppSettings["UsuariosEndpoint"];
-            apiUrl = $"{baseUrl}{usuariosEndpoint}";
-        }
+        public ApiUsuarios(){}
 
         public async Task<List<UsuarioDTO>> GetUsuariosAsync()
         {
+            string apiUrl = $"{baseUrl}{ConfigurationManager.AppSettings["UsuariosEndpoint"]}";
+            Console.WriteLine($"URL generada para la API de usuarios: {apiUrl}");
             try
             {
                 using (HttpClient client = new HttpClient())
                 {
                     HttpResponseMessage response = await client.GetAsync(apiUrl);
 
+                    Console.WriteLine($"Estado de la respuesta: {response.StatusCode}");
+
                     if (response.IsSuccessStatusCode)
                     {
                         string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                        Console.WriteLine($"Respuesta JSON recibida: {jsonResponse}");
+
                         return JsonConvert.DeserializeObject<List<UsuarioDTO>>(jsonResponse);
                     }
                     else
@@ -43,6 +45,139 @@ namespace EstrelladosApp.API
             {
                 Console.WriteLine($"Ocurrió un error: {ex.Message}");
                 return new List<UsuarioDTO>();
+            }
+        }
+        internal async Task<bool> PostRegistrarUsuarioAsync(UsuarioDTO nuevoUsuario)
+        {
+            string apiUrl = $"{baseUrl}{ConfigurationManager.AppSettings["RegisterEndpoint"]}";
+            Console.WriteLine($"URL generada para la API de usuarios: {apiUrl}");
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    // Crear el objeto sin el rol
+                    var usuarioSinRol = new UsuarioSinRolDTO
+                    {
+                        Nombre = nuevoUsuario.Nombre,
+                        Correo = nuevoUsuario.Correo,
+                        Contraseña = nuevoUsuario.Contraseña
+                    };
+
+                    // Serializar el objeto sin rol
+                    string jsonBody = JsonConvert.SerializeObject(usuarioSinRol);
+                    StringContent content = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+
+                    // Mostrar el JSON enviado por consola
+                    Console.WriteLine($"JSON enviado: {jsonBody}");
+
+                    // Enviar la solicitud POST
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+
+                    // Mostrar el estado de la respuesta
+                    Console.WriteLine($"Estado de la respuesta: {response.StatusCode}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Leer la respuesta del servidor
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine($"Respuesta JSON recibida: {jsonResponse}");
+
+                        return true; // Indicar que la operación fue exitosa
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Error al registrar usuario: {response.StatusCode}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocurrió un error: {ex.Message}");
+                return false;
+            }
+        }
+        internal async Task<bool> DeleteUsuarioAsync(long id)
+        {
+            string apiUrl = $"{baseUrl}{ConfigurationManager.AppSettings["UsuariosEndpoint"]}/{id}";
+            Console.WriteLine($"URL generada para la eliminación del usuario: {apiUrl}");
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    // Enviar la solicitud DELETE
+                    HttpResponseMessage response = await client.DeleteAsync(apiUrl);
+
+                    // Mostrar el estado de la respuesta
+                    Console.WriteLine($"Estado de la respuesta: {response.StatusCode}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Leer la respuesta del servidor
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine($"Respuesta JSON recibida: {jsonResponse}");
+
+                        return true; // Indicar que la operación fue exitosa
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Error al eliminar usuario: {response.StatusCode}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocurrió un error: {ex.Message}");
+                return false;
+            }
+        }
+        
+        internal async Task<bool> ActualizarUsuario(UsuarioDTO usuario)
+        {
+            string apiUrl = $"{baseUrl}{ConfigurationManager.AppSettings["UsuariosEndpoint"]}/{usuario.Id}";
+            Console.WriteLine($"URL generada para la actualización del usuario: {apiUrl}");
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    // Serializar el objeto UsuarioDTO a JSON
+                    string jsonBody = JsonConvert.SerializeObject(usuario);
+                    StringContent content = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+
+                    // Mostrar el JSON enviado por consola
+                    Console.WriteLine($"JSON enviado: {jsonBody}");
+
+                    // Enviar la solicitud PUT
+                    HttpResponseMessage response = await client.PutAsync(apiUrl, content);
+                    Console.WriteLine($"peticion JSON recibida: {content}");
+                    // Mostrar el estado de la respuesta
+                    Console.WriteLine($"Estado de la respuesta: {response.StatusCode}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Leer la respuesta del servidor
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine($"Respuesta JSON recibida: {jsonResponse}");
+
+                        return true; // Indicar que la operación fue exitosa
+                    }
+                    else
+                    {
+                        // Leer el cuerpo del error para más detalles
+                        string errorResponse = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine($"Error al actualizar usuario: {response.StatusCode}, Detalles: {errorResponse}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocurrió un error: {ex.Message}");
+                return false;
             }
         }
     }

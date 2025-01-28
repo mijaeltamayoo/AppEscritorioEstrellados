@@ -29,153 +29,127 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.menu = new System.Windows.Forms.Panel();
+            this.CamarButton = new System.Windows.Forms.Button();
+            this.IncidenciasButton = new System.Windows.Forms.Button();
+            this.GraficosButton = new System.Windows.Forms.Button();
+            this.UsuariosButton = new System.Windows.Forms.Button();
+            this.sideNavPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menu.SuspendLayout();
+            this.sideNavPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::EstrelladosApp.Properties.Resources.Icono_Sin_Alfa;
-            this.pictureBox1.Location = new System.Drawing.Point(-117, -13);
+            this.pictureBox1.Location = new System.Drawing.Point(-124, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(459, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // CamarButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cámaras";
-            this.button1.UseVisualStyleBackColor = false;
+            this.CamarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
+            this.CamarButton.FlatAppearance.BorderSize = 0;
+            this.CamarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CamarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CamarButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CamarButton.ForeColor = System.Drawing.Color.White;
+            this.CamarButton.Location = new System.Drawing.Point(0, 167);
+            this.CamarButton.Name = "CamarButton";
+            this.CamarButton.Size = new System.Drawing.Size(217, 32);
+            this.CamarButton.TabIndex = 0;
+            this.CamarButton.Text = "Cámaras";
+            this.CamarButton.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // IncidenciasButton
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
-            this.panel1.Location = new System.Drawing.Point(0, 167);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 32);
-            this.panel1.TabIndex = 1;
+            this.IncidenciasButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
+            this.IncidenciasButton.FlatAppearance.BorderSize = 0;
+            this.IncidenciasButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.IncidenciasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IncidenciasButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncidenciasButton.ForeColor = System.Drawing.Color.White;
+            this.IncidenciasButton.Location = new System.Drawing.Point(-1, 215);
+            this.IncidenciasButton.Name = "IncidenciasButton";
+            this.IncidenciasButton.Size = new System.Drawing.Size(217, 32);
+            this.IncidenciasButton.TabIndex = 2;
+            this.IncidenciasButton.Text = "Incidencias";
+            this.IncidenciasButton.UseVisualStyleBackColor = false;
+            this.IncidenciasButton.Click += new System.EventHandler(this.IncidenciasButton_Click);
             // 
-            // button2
+            // GraficosButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 32);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Incidencias";
-            this.button2.UseVisualStyleBackColor = false;
+            this.GraficosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
+            this.GraficosButton.FlatAppearance.BorderSize = 0;
+            this.GraficosButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GraficosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GraficosButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GraficosButton.ForeColor = System.Drawing.Color.White;
+            this.GraficosButton.Location = new System.Drawing.Point(-1, 263);
+            this.GraficosButton.Name = "GraficosButton";
+            this.GraficosButton.Size = new System.Drawing.Size(217, 32);
+            this.GraficosButton.TabIndex = 4;
+            this.GraficosButton.Text = "Gráficos";
+            this.GraficosButton.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // UsuariosButton
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
-            this.panel2.Location = new System.Drawing.Point(0, 215);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 32);
-            this.panel2.TabIndex = 3;
+            this.UsuariosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
+            this.UsuariosButton.FlatAppearance.BorderSize = 0;
+            this.UsuariosButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UsuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsuariosButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuariosButton.ForeColor = System.Drawing.Color.White;
+            this.UsuariosButton.Location = new System.Drawing.Point(-1, 312);
+            this.UsuariosButton.Name = "UsuariosButton";
+            this.UsuariosButton.Size = new System.Drawing.Size(217, 32);
+            this.UsuariosButton.TabIndex = 8;
+            this.UsuariosButton.Text = "Usuarios";
+            this.UsuariosButton.UseVisualStyleBackColor = false;
+            this.UsuariosButton.Click += new System.EventHandler(this.UsuariosButton_Click);
             // 
-            // button3
+            // sideNavPanel
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 263);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 32);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Gráficos";
-            this.button3.UseVisualStyleBackColor = false;
+            this.sideNavPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
+            this.sideNavPanel.Controls.Add(this.CamarButton);
+            this.sideNavPanel.Controls.Add(this.UsuariosButton);
+            this.sideNavPanel.Controls.Add(this.pictureBox1);
+            this.sideNavPanel.Controls.Add(this.IncidenciasButton);
+            this.sideNavPanel.Controls.Add(this.GraficosButton);
+            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideNavPanel.Location = new System.Drawing.Point(0, 0);
+            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sideNavPanel.Name = "sideNavPanel";
+            this.sideNavPanel.Size = new System.Drawing.Size(219, 616);
+            this.sideNavPanel.TabIndex = 2;
             // 
-            // panel3
+            // mainPanel
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
-            this.panel3.Location = new System.Drawing.Point(0, 263);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 32);
-            this.panel3.TabIndex = 5;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(3, 312);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(217, 32);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Usuarios";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
-            this.panel4.Location = new System.Drawing.Point(0, 312);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 32);
-            this.panel4.TabIndex = 9;
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
-            this.menu.Controls.Add(this.panel4);
-            this.menu.Controls.Add(this.button5);
-            this.menu.Controls.Add(this.panel3);
-            this.menu.Controls.Add(this.button3);
-            this.menu.Controls.Add(this.panel2);
-            this.menu.Controls.Add(this.button2);
-            this.menu.Controls.Add(this.panel1);
-            this.menu.Controls.Add(this.button1);
-            this.menu.Controls.Add(this.pictureBox1);
-            this.menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(220, 550);
-            this.menu.TabIndex = 1;
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(219, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(868, 616);
+            this.mainPanel.TabIndex = 3;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 550);
-            this.Controls.Add(this.menu);
+            this.ClientSize = new System.Drawing.Size(1087, 616);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.sideNavPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menu.ResumeLayout(false);
+            this.sideNavPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -183,14 +157,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel menu;
+        private System.Windows.Forms.Button CamarButton;
+        private System.Windows.Forms.Button IncidenciasButton;
+        private System.Windows.Forms.Button GraficosButton;
+        private System.Windows.Forms.Button UsuariosButton;
+        private System.Windows.Forms.Panel sideNavPanel;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }

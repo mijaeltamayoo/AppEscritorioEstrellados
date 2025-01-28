@@ -81,7 +81,7 @@
             // 
             // text_user
             // 
-            this.text_user.BackColor = System.Drawing.Color.White;
+            this.text_user.BackColor = System.Drawing.Color.Black;
             this.text_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_user.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_user.ForeColor = System.Drawing.Color.DimGray;
@@ -95,7 +95,7 @@
             // 
             // text_password
             // 
-            this.text_password.BackColor = System.Drawing.Color.White;
+            this.text_password.BackColor = System.Drawing.Color.Black;
             this.text_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_password.ForeColor = System.Drawing.Color.DimGray;
@@ -166,7 +166,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // panel2
             // 
@@ -183,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
             this.ClientSize = new System.Drawing.Size(776, 313);
             this.Controls.Add(this.minimizar);
             this.Controls.Add(this.cerrar);
@@ -199,7 +198,6 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "USUARIO";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
